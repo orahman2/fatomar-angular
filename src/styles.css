@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #522422;
+}
+
+.btn-danger{
+    background-color: #522422;
+    border-color: #522438;
+}

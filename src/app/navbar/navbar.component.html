@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-left" href="#"><img src="assets/images/website-logo.png" height="30" alt=""></a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+          <a id="home-btn" class="nav-link nav-btn" [routerLink]="['']">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-btn" [routerLink]="['reviews']">Reviews</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link nav-btn" [routerLink]="['map']" href="#map-container">Map</a>
+      </li>
+      <li class="nav-item">
+        <app-modal></app-modal>
+      </li>
+    </ul>
+
+    <div class="modal fade" id="contactForm" tabindex="-1" role="dialog" aria-labelledby="contactFormTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactFormTitle">Contact Form</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="container">
+            <form id="contact-form" action="#">
+              <div class="modal-body">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Subject" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email here" required>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                      <label for="category">Select type:</label>
+                      <select class="form-control" id="type" required>
+                        <option>Query</option>
+                        <option>Complaint</option>
+                        <option>Suggestion</option>
+                        <option>Collaboration</option>
+                        <option>Other</option>
+                      </select>
+                      <!-- <label for="exampleInputEmail1">Category</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="?"> -->
+                  </div>
+                  <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Message</label>
+                    <input type="text" class="form-control" id="message" placeholder="Enter message here" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="checkbox" class="form-check-input" id="checkBox" disabled>
+                    <label class="form-check-label" for="checkBox">Receive awesome emails about offers?</label>
+                    <small id="emailHelp" class="form-text text-muted">Coming soon</small>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="form-button" type="submit" class="btn btn-danger">Send!</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Disabled search bar -->
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="disabledTextInput" disabled>
+      <button id="search-button"type="button" class="btn btn-danger bg-dark my-2 my-sm-0" data-toggle="tooltip" data-placement="bottom" title="Coming soon">Search temporarily disabled</button>
+    </form>
+  </div>
+</nav>

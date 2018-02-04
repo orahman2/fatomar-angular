@@ -1,0 +1,16 @@
+.nav-item{
+    background-color: transparent;
+    border: 0;
+}
+
+.modal-body{
+    /* background-color: gray; */
+    color: white !important;
+    background-color: #522422;
+}
+.text-muted{color: white !important;}
+
+.modal-header{
+    background: #212529;
+    color: white;
+}
