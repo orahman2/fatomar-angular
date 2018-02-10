@@ -25,16 +25,15 @@
       </carousel>
     </div>
     <div class="col-sm-6 order-md-first order-lg-first">
-      <h1 class="display-4">Creams</h1>
+      <h1 class="display-4">{{this.dataService.beautifyName(name)}}</h1>
       <hr/>
       <br/>
-      <p class="lead">Creams is a dessert parlour with branches nationwide, serving up all kinds of mouth watering treats. The place itself is styled like a diner with a theme of black and purple. The menu is extensive and well sectioned, making it very hard to pick your sin. We decided to order a sweet shop bubble pop waffle and a kinder bueno cookie dough. The waffle was massive and smelled amazing! The bubblegum ice cream gave it a unique funky refreshing taste. The cookie dough was warm, soft and gooey on the inside, and went very well with the vanilla ice cream and the partially melted cookie dough. 
+      <p class="lead">{{review}}
         <br/>
-        <br/>Verdict: 👍🏼
+        <br/>Verdict: {{verdict}}
         <br/>
         <br/>
-        Fully halal establishment
-        {{id}}
+        {{status}}
       </p>
     </div>
   </div>

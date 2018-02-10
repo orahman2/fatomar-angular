@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from '../services/data-service';
 
 @Component({
   selector: 'app-card',
@@ -10,16 +11,9 @@ export class CardComponent implements OnInit {
 @Input() restaurantName: String;
 @Input() id: String;
 
-  ngOnInit() {
-  }
+  constructor(private dataService: DataService){}
 
-  beautifyName(name: string){
-    var words = name.split('_')
-    var restaurantName = '';
-    for (var index in words) {
-      restaurantName += words[index].charAt(0).toUpperCase() + words[index].substr(1).toLowerCase() + ' ';
-    }
-    return restaurantName;
+  ngOnInit() {
   }
 
 }

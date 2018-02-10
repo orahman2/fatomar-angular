@@ -2,7 +2,7 @@
 <div class="card mx-auto" style="width: 20rem; background-color:lightgray;">
   <img class="card-img-top" src="{{imageLocation}}" alt="Card image cap">
   <div class="card-block">
-    <h4 class="card-title">{{beautifyName(restaurantName)}}</h4>
+    <h4 class="card-title">{{this.dataService.beautifyName(restaurantName)}}</h4>
     <a [routerLink]="['..','review-page',{id: id}]" class="btn btn-danger float-right" style="background-color: #522438;">Review</a>
   </div>
 </div>
