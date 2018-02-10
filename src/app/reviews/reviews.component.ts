@@ -11,22 +11,11 @@ import { DataService } from '../services/data-service';
 export class ReviewsComponent implements OnInit {
   allCardDetails: {RestaurantName : String, Review : String, _id: String}[];
 
-  constructor(private dataService: DataService) { 
-    // this.allCardDetails = [
-    //   {name: 'Creams Cafe' , imageLoc: 'assets/images/creams_bubble_waffle.1.jpg'},
-    //   {name: 'Creams Cafe' , imageLoc: 'assets/images/creams_bubble_waffle.1.jpg'},
-    //   {name: 'Creams Cafe' , imageLoc: 'assets/images/creams_bubble_waffle.1.jpg'},
-    //   {name: 'Creams Cafe' , imageLoc: 'assets/images/creams_bubble_waffle.1.jpg'},
-    //   {name: 'Creams Cafe' , imageLoc: 'assets/images/creams_bubble_waffle.1.jpg'},
-    //   {name: 'Creams Cafe' , imageLoc: 'assets/images/creams_bubble_waffle.1.jpg'},
-    //   {name: 'Creams Cafe' , imageLoc: 'assets/images/creams_bubble_waffle.1.jpg'},
-    //   {name: 'Creams Cafe' , imageLoc: 'assets/images/creams_bubble_waffle.1.jpg'},
-    // ];
-  }
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
     console.log('begin logging data');
-    this.dataService.getData().subscribe(data => {
+    this.dataService.getAllReviews().subscribe(data => {
       this.allCardDetails = data;
     });
   }

@@ -11,8 +11,8 @@ router.get('/allReviews', function(req, res, next){
     });
 });
 
-router.get('/review/:name', function(req, res, next){
-    db.main_content.findOne({RestaurantName: req.params.name},function(err, main_content){
+router.get('/review/:id', function(req, res, next){
+    db.main_content.findOne({_id: mongoJS.ObjectID(req.params.id)},function(err, main_content){
         if(err){
             res.send(err);
         }

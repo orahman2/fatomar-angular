@@ -7,7 +7,7 @@ export class DataService{
 
     constructor(private http: Http){}
 
-    getData(){
+    getAllReviews(){
         return this.http.get('http://localhost:3000/api/allReviews').map(res => res.json());
     }
 }

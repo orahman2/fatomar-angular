@@ -20,7 +20,8 @@ const appRoutes: Routes = [
   {path:'',component:HomeComponent},
   {path:'map', component:MapComponent},
   {path:'reviews', component:ReviewsComponent},
-  {path:'review-page',component:ReviewPageComponent}
+  {path:'review-page',component:ReviewPageComponent},
+  {path: 'reviews/:id',component:ReviewPageComponent}
 ];
 
 @NgModule({

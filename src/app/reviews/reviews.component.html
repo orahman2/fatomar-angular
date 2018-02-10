@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-5 col-lg-4" *ngFor="let cardDetails of allCardDetails" style="margin-top: auto !important; margin-bottom: auto !important; padding: 2%">
-            <app-card [imageLocation]=getImageLocation(cardDetails.RestaurantName) [restaurantName]=cardDetails.RestaurantName></app-card>
+            <app-card [imageLocation]=getImageLocation(cardDetails.RestaurantName) [restaurantName]=cardDetails.RestaurantName [id]=cardDetails._id></app-card>
         </div>
     </div>
 </div>
