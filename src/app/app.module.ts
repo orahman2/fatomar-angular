@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -38,7 +38,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     CarouselModule.forRoot(),
-    HttpClientModule,
+    HttpModule,
     ModalModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
