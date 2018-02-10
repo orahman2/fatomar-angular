@@ -3,6 +3,6 @@
   <img class="card-img-top" src="{{imageLocation}}" alt="Card image cap">
   <div class="card-block">
     <h4 class="card-title">{{beautifyName(restaurantName)}}</h4>
-    <a [routerLink]="['..','review-page',id]" class="btn btn-danger float-right" style="background-color: #522438;">Review</a>
+    <a [routerLink]="['..','review-page',{id: id}]" class="btn btn-danger float-right" style="background-color: #522438;">Review</a>
   </div>
 </div>
