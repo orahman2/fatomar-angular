@@ -9,24 +9,18 @@
     <div class="col-md-11"></div>
   </div>
   <hr/>
+  <h1 class="display-4">{{this.dataService.beautifyName(name)}}</h1>
   <div class="row">
     <div class="col-sm-6 order-md-last order-lg-last">
       <carousel class="carousel-fade">
-        <slide class="animated fadeIn">
-          <img src="assets/images/creams/1.jpg" alt="First slide" style="display: block; width: 100%;">
-          <div class="carousel-caption d-none d-md-block">
-          </div>
-        </slide>
-        <slide class="animated fadeIn">
-          <img src="assets/images/creams/2.jpg" alt="First slide" style="display: block; width: 100%;">
+        <slide *ngFor="let i of imageAddresses" class="animated fadeIn">
+          <img src="{{i}}" alt="First slide" style="display: block; width: 100%;">
           <div class="carousel-caption d-none d-md-block">
           </div>
         </slide>
       </carousel>
     </div>
     <div class="col-sm-6 order-md-first order-lg-first">
-      <h1 class="display-4">{{this.dataService.beautifyName(name)}}</h1>
-      <hr/>
       <br/>
       <p class="lead">{{review}}
         <br/>
