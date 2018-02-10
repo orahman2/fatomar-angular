@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reviews.component.css']
 })
 export class ReviewsComponent implements OnInit {
+  allCardDetails: [{name : String, imageLoc : String}];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() { 
+    this.allCardDetails = [
+      {name: 'Creams Cafe' , imageLoc: 'assets/images/creams_bubble_waffle.1.jpg'},
+      {name: 'Creams Cafe' , imageLoc: 'assets/images/creams_bubble_waffle.1.jpg'},
+      {name: 'Creams Cafe' , imageLoc: 'assets/images/creams_bubble_waffle.1.jpg'}
+    ];
   }
+
+  ngOnInit() {}
 
 }

@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -12,11 +13,14 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { MapComponent } from './map/map.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { CardComponent } from './card/card.component';
+import { ReviewPageComponent } from './review-page/review-page.component';
 
 const appRoutes: Routes = [
   {path:'',component:HomeComponent},
   {path:'map', component:MapComponent},
-  {path:'reviews', component:ReviewsComponent}
+  {path:'reviews', component:ReviewsComponent},
+  {path:'review-page',component:ReviewPageComponent}
 ];
 
 @NgModule({
@@ -27,11 +31,14 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutComponent,
     MapComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    CardComponent,
+    ReviewPageComponent
   ],
   imports: [
     BrowserModule,
     CarouselModule.forRoot(),
+    HttpClientModule,
     ModalModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
