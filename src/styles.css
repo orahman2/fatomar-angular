@@ -26,3 +26,7 @@ body{
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
 }
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}

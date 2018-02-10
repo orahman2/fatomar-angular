@@ -12,4 +12,13 @@ export class CardComponent implements OnInit {
   ngOnInit() {
   }
 
+  beautifyName(name: string){
+    var words = name.split('_')
+    var restaurantName = '';
+    for (var index in words) {
+      restaurantName += words[index].charAt(0).toUpperCase() + words[index].substr(1).toLowerCase() + ' ';
+    }
+    return restaurantName;
+  }
+
 }
